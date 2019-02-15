@@ -15,5 +15,4 @@ twitter = OAuth1Session(CK, CS, AT, ATS)
 
 getTimeline()
 
-# search
 search_url = "https://api.twitter.com/1.1/search/tweets.json"
