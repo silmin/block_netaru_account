@@ -1,8 +1,8 @@
 import json, config
 from requests_oauthlib import OAuth1Session
 
-import get_timeline
-import search
+from get_timeline import getTimeline
+from search_word import searchWord
 
 # from config.py
 CK = config.CONSUMER_KEY
@@ -13,6 +13,7 @@ ATS = config.ACCESS_TOKEN_SECRET
 # certify
 twitter = OAuth1Session(CK, CS, AT, ATS)
 
-getTimeline()
+getTimeline(twitter, 1)
 
-search_url = "https://api.twitter.com/1.1/search/tweets.json"
+searchWord(twitter, "neta ru.com/", 5)
+

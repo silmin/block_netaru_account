@@ -1,4 +1,7 @@
-def getTimeline(cnt) :
+import json
+from requests_oauthlib import OAuth1Session
+
+def getTimeline(twitter, cnt) :
     timeline_url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
     params = {'count': cnt}
     res = twitter.get(timeline_url, params = params)
