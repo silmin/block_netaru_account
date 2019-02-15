@@ -13,7 +13,7 @@ ATS = config.ACCESS_TOKEN_SECRET
 # certify
 twitter = OAuth1Session(CK, CS, AT, ATS)
 
-getMyTimeline();
+getTimeline()
 
 # search
 search_url = "https://api.twitter.com/1.1/search/tweets.json"
