@@ -1,6 +1,3 @@
-import json
-from requests_oauthlib import OAuth1Session
-
 def blockUsers(twitter, user_ids) :
     url = "https://api.twitter.com/1.1/blocks/create.json"
 

@@ -1,5 +1,4 @@
 import json
-from requests_oauthlib import OAuth1Session
 
 def searchWord(twitter, word, cnt) :
     url = "https://api.twitter.com/1.1/search/tweets.json"
