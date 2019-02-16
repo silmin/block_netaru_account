@@ -16,7 +16,7 @@ ATS = keys.ACCESS_TOKEN_SECRET
 twitter = OAuth1Session(CK, CS, AT, ATS)
 
 
-result = searchWord(twitter, "url:neta+ru.com exclude:retweets", 20)
+result = searchWord(twitter, "url:neta+ru.com exclude:retweets", 100)
 
 if result != [] : 
     user_ids = getUserids(result)
