@@ -14,10 +14,11 @@ ATS = config.ACCESS_TOKEN_SECRET
 # certify
 twitter = OAuth1Session(CK, CS, AT, ATS)
 
-getTimeline(twitter, 1)
+# getTimeline(twitter, 1)
 
-flg, result = searchWord(twitter, "url:neta+ru.com", 5)
+result = searchWord(twitter, "url:neta+ru.com exclude:retweets", 20)
 
-if flg : 
+if result != [] : 
     user_ids = getUserids(result)
+    print(user_ids)
 
