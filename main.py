@@ -4,6 +4,7 @@ from requests_oauthlib import OAuth1Session
 from get_timeline import getTimeline
 from search_word import searchWord
 from get_userid import getUserids
+from block_user import blockUsers
 
 # from config.py
 CK = config.CONSUMER_KEY
@@ -21,4 +22,7 @@ result = searchWord(twitter, "url:neta+ru.com exclude:retweets", 20)
 if result != [] : 
     user_ids = getUserids(result)
     print(user_ids)
-
+    
+    blockUsers(twitter, user_ids)
+else :
+    print("error")
