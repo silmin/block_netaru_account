@@ -11,8 +11,8 @@ def searchWord(twitter, word, cnt) :
     if req.status_code == 200 :
         searchResults = json.loads(req.text)
         for tweet in searchResults['statuses']:
-            print(tweet)
-            #print(tweet['user']['name'] + "::" + tweet['text'] + "\n\n")
+            #print(tweet)
+            print(tweet['user']['name'] + "::" + tweet['text'] + "\n\n")
         return (True, searchResults['statuses'])
     else :
         print("ERROR: %d" % req.status_code)
