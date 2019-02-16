@@ -1,6 +1,8 @@
 def getUserids(result) :
     id_list = []
     for tweet in result :
-        id_list.append(tweet['user']['screen_name'])
+        user_id = tweet['user']['screen_name']
+        if not(user_id in id_list) : 
+            id_list.append(user_id)
 
     return id_list
