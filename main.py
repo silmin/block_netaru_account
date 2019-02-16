@@ -15,5 +15,6 @@ twitter = OAuth1Session(CK, CS, AT, ATS)
 
 getTimeline(twitter, 1)
 
-searchWord(twitter, "url:neta+ru.com", 5)
+flg, result = searchWord(twitter, "url:neta+ru.com", 5)
+
 

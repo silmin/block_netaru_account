@@ -13,6 +13,8 @@ def searchWord(twitter, word, cnt) :
         for tweet in searchResults['statuses']:
             print(tweet)
             #print(tweet['user']['name'] + "::" + tweet['text'] + "\n\n")
+        return (True, searchResults['statuses'])
     else :
         print("ERROR: %d" % req.status_code)
+        return (False, [])
 
