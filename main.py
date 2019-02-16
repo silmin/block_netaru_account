@@ -1,7 +1,6 @@
 import json, config
 from requests_oauthlib import OAuth1Session
 
-from get_timeline import getTimeline
 from search_word import searchWord
 from get_userid import getUserids
 from block_user import blockUsers
@@ -15,7 +14,6 @@ ATS = config.ACCESS_TOKEN_SECRET
 # certify
 twitter = OAuth1Session(CK, CS, AT, ATS)
 
-# getTimeline(twitter, 1)
 
 result = searchWord(twitter, "url:neta+ru.com exclude:retweets", 20)
 
