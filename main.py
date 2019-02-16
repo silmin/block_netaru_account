@@ -1,15 +1,16 @@
-import json, config
+import json 
 from requests_oauthlib import OAuth1Session
 
+import keys
 from search_word import searchWord
 from get_userid import getUserids
 from block_user import blockUsers
 
-# from config.py
-CK = config.CONSUMER_KEY
-CS = config.CONSUMER_SECRET
-AT = config.ACCESS_TOKEN
-ATS = config.ACCESS_TOKEN_SECRET
+# from keys.py
+CK = keys.CONSUMER_KEY
+CS = keys.CONSUMER_SECRET
+AT = keys.ACCESS_TOKEN
+ATS = keys.ACCESS_TOKEN_SECRET
 
 # certify
 twitter = OAuth1Session(CK, CS, AT, ATS)
